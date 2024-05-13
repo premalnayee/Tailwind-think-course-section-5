@@ -11,7 +11,10 @@ module.exports = {
        },
        colors: {
         mainColor: '#1E293B'
-       } 
+       },
+       spacing: {
+        13 : '3.25rem',
+       }
     },
   },
   variants: {

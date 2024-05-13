@@ -1,1 +1,4 @@
-@apply debug-screens;
+/* @apply debug-screens; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
