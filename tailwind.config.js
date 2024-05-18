@@ -1,26 +1,31 @@
+const { plugin } = require('postcss');
+
 module.exports = {
+  presets: [
+    require('./company_styles')
+  ],
   content: ['./dist/**/*.html'],
-  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    debugScreens: {
-      position: ['top', 'left'],
+    container: {
+      center: true,
+      padding: {
+      DEFAULT: '0.5rem',
+      sm: '1rem',
+      lg: '1.5rem',
+      xl: '2rem',
+      '2xl': '4rem',
+      },
     },
     extend: {
-      fontFamily: {
-        headline: ['Oswald']
-       },
-       colors: {
-        mainColor: '#1E293B'
-       },
-       spacing: {
-        13 : '3.25rem',
-       }
+      
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      width: ['hover'],
+    },
   },
   plugins: [
     require('tailwindcss-debug-screens'),
-  ]
+  ],
 }
